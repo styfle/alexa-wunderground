@@ -1,0 +1,13 @@
+{
+  "name": "alexa-example",
+  "version": "1.0.0",
+  "description": "An Amazon Alexa skill for Weather Underground",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "styfle",
+  "license": "MIT"
+}
