@@ -15,7 +15,7 @@ const server = http.createServer((req, res) => {
         if (raw) {
             console.log('raw data: ', raw);
             const data = JSON.parse(raw);
-            data.request.intent.slots.city.value;
+            // TODO: do stuff with data
         }
         console.log('\n');
         
