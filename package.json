@@ -9,5 +9,12 @@
   },
   "keywords": [],
   "author": "styfle",
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/styfle/alexa-wunderground"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^1.7.3"
+  }
 }
