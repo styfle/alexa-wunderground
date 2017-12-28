@@ -6,11 +6,11 @@ const HOSTNAME = '0.0.0.0';
 const PORT = process.env.PORT || 3012;
 const API_KEY = process.env.API_KEY;
 
-const server = http.createServer(async (req, res) => {
+const server = http.createServer((req, res) => {
     try {
         let raw = '';
         req.on('data', chunk => { raw += chunk; });
-        req.on('end', () => {
+        req.on('end', async () => {
             console.log('ip: ', req.connection.remoteAddress);
             console.log('method: ', req.method);
             console.log('url: ', req.url);
@@ -18,7 +18,7 @@ const server = http.createServer(async (req, res) => {
             if (raw) {
                 console.log('raw data: ', raw);
                 const data = JSON.parse(raw);
-                const alexaResponse = getZip(data);
+                const alexaResponse = await getZip(data);
                 console.log(alexaResponse);
                 const json = JSON.stringify(alexaResponse);
                 /*
