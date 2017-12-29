@@ -91,7 +91,8 @@ async function getZip(data) {
     const r = await fetch(`${data.context.System.apiEndpoint}/v1/devices/${data.context.System.device.deviceId}/settings/address/countryAndPostalCode`, { 
         method: 'GET', 
         headers: {
-            'Authorization': 'Basic ' + data.context.System.apiAccessToken, 
+            'Authorization': 'Bearer ' + data.context.System.apiAccessToken, 
+            'Accept': 'application/json',
             'Content-Type': 'application/json'
         }
     });
