@@ -1,0 +1,22 @@
+{
+  "intents": [
+    {
+      "slots": [
+        {
+          "name": "city",
+          "type": "AMAZON.US_CITY"
+        }
+      ],
+      "intent": "WundergroundIntent"
+    },
+    {
+      "intent": "AMAZON.SearchAction<object@WeatherForecast>"
+    },
+    {
+      "intent": "AMAZON.SearchAction<object@WeatherForecast[temperature]>"
+    },
+    {
+      "intent": "AMAZON.SearchAction<object@WeatherForecast[weatherCondition]>"
+    }
+  ]
+}

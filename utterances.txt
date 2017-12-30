@@ -1,0 +1,1 @@
+WundergroundIntent to show weather in {city}
